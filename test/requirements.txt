@@ -1,2 +1,6 @@
-test
-test
+apache-libcloud==3.3.1
+test-libcloud==3.5.1
+test1==3.5.5
+test2==3.5.1
+
+

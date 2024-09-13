@@ -1,0 +1,5 @@
+name,version,type,path
+apache-libcloud,3.3.1,pip,C:\Users\Bahaa\Desktop\Bahaa\SBOM\test\requirements.txt
+test-libcloud,3.5.1,pip,C:\Users\Bahaa\Desktop\Bahaa\SBOM\test\requirements.txt
+test1,3.5.5,pip,C:\Users\Bahaa\Desktop\Bahaa\SBOM\test\requirements.txt
+test2,3.5.1,pip,C:\Users\Bahaa\Desktop\Bahaa\SBOM\test\requirements.txt
