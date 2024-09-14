@@ -1,0 +1,686 @@
+[
+    {
+        "name": "apache-libcloud",
+        "version": "3.3.1",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\requirements.txt"
+    },
+    {
+        "name": "test-libcloud",
+        "version": "3.5.1",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\requirements.txt"
+    },
+    {
+        "name": "test1",
+        "version": "3.5.5",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\requirements.txt"
+    },
+    {
+        "name": "test2",
+        "version": "3.5.1",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\requirements.txt"
+    },
+    {
+        "name": "nested1-libcloud",
+        "version": "3.3.1",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\nested1\\requirements.txt"
+    },
+    {
+        "name": "nested1-libcloud",
+        "version": "3.5.1",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\nested1\\requirements.txt"
+    },
+    {
+        "name": "nested1",
+        "version": "3.5.5",
+        "type": "pip",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\nested1\\requirements.txt"
+    },
+    {
+        "name": "@emotion/react",
+        "version": "11.13.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@emotion/styled",
+        "version": "11.13.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@mdi/js",
+        "version": "7.4.47",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@monaco-editor/react",
+        "version": "4.6.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@mui/icons-material",
+        "version": "5.16.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@mui/material",
+        "version": "5.16.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@mui/x-date-pickers",
+        "version": "7.12.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@redux-devtools/extension",
+        "version": "3.3.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@reduxjs/toolkit",
+        "version": "2.2.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@stripe/react-stripe-js",
+        "version": "2.7.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@stripe/stripe-js",
+        "version": "4.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "axios",
+        "version": "1.7.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "copy-to-clipboard",
+        "version": "3.3.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "generate-password",
+        "version": "1.7.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jwt-decode",
+        "version": "4.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "md5",
+        "version": "2.3.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "moment",
+        "version": "2.30.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "moment-duration-format",
+        "version": "2.3.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "msgpack5",
+        "version": "6.0.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "pluralize",
+        "version": "8.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react",
+        "version": "^18.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-beautiful-dnd",
+        "version": "13.1.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-big-calendar",
+        "version": "1.13.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-copy-to-clipboard",
+        "version": "5.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-dom",
+        "version": "^18.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-dropzone",
+        "version": "14.2.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-ga4",
+        "version": "2.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-google-recaptcha",
+        "version": "3.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-hook-form",
+        "version": "7.52.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-idle-timer",
+        "version": "5.7.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-linkify",
+        "version": "1.0.0-alpha",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-redux",
+        "version": "9.1.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "react-router-dom",
+        "version": "6.25.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "redux-thunk",
+        "version": "^3.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "tss-react",
+        "version": "4.9.11",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "universal-cookie",
+        "version": "7.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "uuid",
+        "version": "10.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "validator",
+        "version": "13.12.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "victory",
+        "version": "37.0.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@xterm/xterm",
+        "version": "5.5.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@xterm/addon-fit",
+        "version": "0.10.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@xterm/addon-search",
+        "version": "0.15.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@xterm/addon-web-links",
+        "version": "0.11.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "zxcvbn",
+        "version": "4.4.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/core",
+        "version": "7.25.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/eslint-parser",
+        "version": "7.25.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/plugin-syntax-dynamic-import",
+        "version": "7.8.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/plugin-transform-runtime",
+        "version": "7.24.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/preset-env",
+        "version": "7.25.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/preset-react",
+        "version": "7.24.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@emotion/jest",
+        "version": "11.11.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@svgr/webpack",
+        "version": "8.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@testing-library/jest-dom",
+        "version": "6.4.8",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@testing-library/react",
+        "version": "^16.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@testing-library/user-event",
+        "version": "14.5.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@trivago/prettier-plugin-sort-imports",
+        "version": "4.3.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@typescript-eslint/eslint-plugin",
+        "version": "8.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@typescript-eslint/parser",
+        "version": "8.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@babel/preset-typescript",
+        "version": "^7.24.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@types/jest",
+        "version": "^29.5.12",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@types/node",
+        "version": "^22.0.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@types/react",
+        "version": "^18.3.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "@types/react-dom",
+        "version": "^18.3.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "assert",
+        "version": "2.1.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "autoprefixer",
+        "version": "10.4.19",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "babel-jest",
+        "version": "~29.7.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "buffer",
+        "version": "6.0.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "child_process",
+        "version": "1.0.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "clean-webpack-plugin",
+        "version": "4.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "copy-webpack-plugin",
+        "version": "12.0.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "core-js",
+        "version": "3.37.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "crypto-browserify",
+        "version": "3.12.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "css-loader",
+        "version": "7.1.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "esbuild-loader",
+        "version": "4.2.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint",
+        "version": "8.57.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-plugin-import",
+        "version": "2.29.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-plugin-prettier",
+        "version": "5.2.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-plugin-react",
+        "version": "7.35.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-plugin-react-hooks",
+        "version": "4.6.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-plugin-sonarjs",
+        "version": "1.0.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "eslint-webpack-plugin",
+        "version": "4.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "file-loader",
+        "version": "6.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "html-webpack-plugin",
+        "version": "5.6.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "husky",
+        "version": "9.1.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jest",
+        "version": "29.7.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jest-environment-jsdom",
+        "version": "29.7.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jest-junit",
+        "version": "16.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jest-resolve",
+        "version": "~29.7.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jest-watch-typeahead",
+        "version": "2.2.2",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "jsdom-worker",
+        "version": "0.3.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "less",
+        "version": "4.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "less-loader",
+        "version": "12.2.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "lint-staged",
+        "version": "15.2.7",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "mini-css-extract-plugin",
+        "version": "2.9.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "msw",
+        "version": "2.3.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "postcss",
+        "version": "8.4.40",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "postcss-loader",
+        "version": "8.1.1",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "prettier",
+        "version": "3.3.3",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "process",
+        "version": "0.11.10",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "redux-mock-store",
+        "version": "1.5.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "stream-browserify",
+        "version": "3.0.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "typescript",
+        "version": "^5.5.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "undici",
+        "version": "^5.28.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "util",
+        "version": "0.12.5",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "webpack",
+        "version": "5.93.0",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "webpack-cli",
+        "version": "5.1.4",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    },
+    {
+        "name": "yarn",
+        "version": "1.22.22",
+        "type": "npm",
+        "path": "C:\\Users\\Bahaa\\Desktop\\Bahaa\\SBOM\\test\\package.json"
+    }
+]

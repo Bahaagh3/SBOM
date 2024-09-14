@@ -1,6 +1,6 @@
 from pathlib import Path
 import pandas as pd
-
+import json
 def get_file(path:str,file_name:str) -> list[Path]:
     """
     This function takes a path and a file name, than return a list with the files with the same name.
@@ -23,33 +23,52 @@ def get_file(path:str,file_name:str) -> list[Path]:
     
     return files_list
 
-def get_requirements(path:str)-> pd.DataFrame:
+def get_requirements(path:str)-> list[dict]:
     files = get_file(path,"requirements.txt")
 
     
-    data = {"name":[], "version":[],"type":[],"path":[]}
+    data = []
     for file in files: 
         text =file.read_text().split("\n")
         for line in text:
             if line == "":
                 continue
             name,version = line.split("==") # the format is <name>==<verison>
-            data["name"].append(name)
-            data["version"].append(version)
-            data["type"].append("pip")
-            data["path"].append(file.absolute())
-    df = pd.DataFrame(data)
-    return df
+            data.append({"name":name, "version":version,"type":"pip","path":str(file.absolute())})
+    return data
 
 
 def get_package(path:str):
-    return get_file(path,"package.json")
 
-def create_csv(path:str):
-    # TODO get dependencys form package.json
-    df =get_requirements(path)
-    out_file =  Path("SBOM.csv",)
-    out_file.write_text(df.to_csv(index_label= False,index=False),newline="")
+    files = get_file(path,"package.json")
+    data = []
+
+    for file in files:
+        text = json.loads(file.read_text())
+        dependencies = {}
+        if "dependencies" in text:
+            dependencies.update(text["dependencies"])
+        if "devDependencies" in text:
+            dependencies.update(text["devDependencies"])
+        for d in dependencies:
+            data.append({"name":d, "version":dependencies[d],"type":"npm","path":str(file.absolute())})
+    return data
+
+def create_files(path:str):
+    # creating csv
+    req_data = get_requirements(path)
+    pack_data = get_package(path)
+    data = req_data+pack_data
+    df = pd.DataFrame(data)
+    csv_file =  Path("SBOM.csv")
+    csv_file.write_text(df.to_csv(index_label= False,index=False),newline="")
+    print("Saved SBOM in CSV format")
+
+    # creating json
+    json_file = Path("SBOM.json")
+    json_file.write_text(json.dumps(data,indent=4),newline="")
+    pirnt("Saved SBOM in JSON format")
+
 
 if __name__ == "__main__":
-    create_csv("test")
+    create_files("test")
