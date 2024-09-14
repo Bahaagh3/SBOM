@@ -2,6 +2,8 @@ from pathlib import Path
 import pandas as pd
 import json
 import sys
+import datetime
+
 def get_file(path:str,file_name:str) -> list[Path]:
     """
     This function takes a path and a file name, than return a list with the files with the same name.
@@ -11,26 +13,35 @@ def get_file(path:str,file_name:str) -> list[Path]:
         - file_name (str) : The name of the file to find
     
     Returns:
-        files_list (list[Path]) :list of available files with the name file_name.
+        files_list (list[Path]) : list of available files with the name file_name.
     """
 
     dir = Path(path)
-
+    # check if the path is valid
     if not dir.exists() and not dir.is_dir():
         raise NotADirectoryError(f"Did not find a real directory at '{path}'")
     
+    # traverse thorw the path and find all files with 'file_name' name in all sub directory
     files= dir.rglob(file_name)
+    # trun them to a list
     files_list = [i for i in files]
     
     return files_list
 
 def get_requirements(path:str)-> list[dict]:
-    files = get_file(path,"requirements.txt")
-
+    """
+    This function takes a path, fetches all 'requirements.txt', than trun them to a list of dict.
+    Parameters:
+        - path (str) : The absolute or relative path to a directory
     
+    Returns:
+        data (list[dict]) : list of all the data in the 'requirements.txt' files in 'path'
+    """
+    files = get_file(path,"requirements.txt")
+    #last_check = str(datetime.datetime.now())
     data = []
     for file in files: 
-        text =file.read_text().split("\n")
+        text = file.read_text().split("\n")
         for line in text:
             if line == "":
                 continue
@@ -39,10 +50,19 @@ def get_requirements(path:str)-> list[dict]:
     return data
 
 
-def get_package(path:str):
+def get_package(path:str)-> list[dict]:
+    """
+    This function takes a path, fetches all 'package.json', than trun them to a list of dict.
+    Parameters:
+        - path (str) : The absolute or relative path to a directory
+    
+    Returns:
+        data (list[dict]) : list of all the data in the 'package.json' files in 'path'
+    """
 
     files = get_file(path,"package.json")
     data = []
+    #last_check = str(datetime.datetime.now())
 
     for file in files:
         text = json.loads(file.read_text())
@@ -54,38 +74,88 @@ def get_package(path:str):
         for d in dependencies:
             data.append({"name":d, "version":dependencies[d],"type":"npm","path":str(file.absolute())})
     return data
+def get_package_lock(path:str)-> list[dict]:
+    """
+    This function takes a path, fetches all 'package-lock.json', than trun them to a list of dict.
+    Parameters:
+        - path (str) : The absolute or relative path to a directory
+    
+    Returns:
+        data (list[dict]) : list of all the data in the 'package.json' files in 'path'
+    """
 
-def create_files(path:str,dest:str= Path.cwd()):
-    # creating csv
+    files = get_file(path,"package-lock.json")
+    data = []
+    #last_check = str(datetime.datetime.now())
+
+    for file in files:
+        text = json.loads(file.read_text())
+        dependencies = {}
+        packages = text["packages"]
+        for package in packages:
+            # check if the package name is "" (which mean its the pacakge.json dependencies) and skip it so we dont get duplicets
+            if  package == "" or"dependencies" not in packages[package]:
+                continue
+
+            current_dependencies =packages[package]["dependencies"]
+            for dependency in current_dependencies:
+                # if dependency allready exists than take the one with the latest version 
+                if dependency in dependencies:
+                    dependencies[dependency] = max(dependencies[dependency],current_dependencies[dependency])
+                else:
+                    dependencies[dependency] = current_dependencies[dependency]
+        for d in dependencies:
+            data.append({"name":d, "version":dependencies[d],"type":"npm-i","path":str(file.absolute())})
+    return data
+
+def create_files(path:str,dest:str = Path.cwd(),indirect:bool = True) -> None:
+    """
+    This function create 'SBOM.csv' and 'SBOM.json' files given a 'path' to the repositories directory.
+    Parameters:
+        - path (str) : The absolute or relative path to a directory
+        - dest (str) : The path to a directory where SBOM files are saved. Default set to the current directory
+    
+
+    """
+    # getting the data
     req_data = get_requirements(path)
     pack_data = get_package(path)
-    data = req_data+pack_data
+    pack_lock_data = []
+    if indirect:
+        pack_lock_data = get_package_lock(path)
+
+    data = req_data+pack_data+pack_lock_data
+
+    # trun them to a dataframe so it can easily be trun into csv file 
     df = pd.DataFrame(data)
     dest_dir = Path(dest)
+    # check if dest_dir is valid
     if not dest_dir.exists() and not dest_dir.is_dir():
         raise NotADirectoryError(f"Did not find a real directory at '{dest_dir}'")
 
-    csv_file = Path(dest).joinpath("SBOM.csv")
+    # creating csv
+    csv_file = Path(dest).joinpath("sbom.csv")
     csv_file.write_text(df.to_csv(index_label= False,index=False),newline="")
     print(f"Saved SBOM in CSV format at '{dest_dir}'")
 
     # creating json
-
-    json_file = Path(dest).joinpath("SBOM.json")
-
+    json_file = Path(dest).joinpath("sbom.json")
     json_file.write_text(json.dumps(data,indent=4),newline="")
     print(f"Saved SBOM in JSON format at '{dest_dir}'")
 
 
 if __name__ == "__main__":
     args = sys.argv
+    # change to True if you dont want  dependencies
+    indirect = False
+    
     length = len(args)
     if length == 1:
-        create_files(str(Path.cwd()))
+        create_files(str(Path.cwd()),indirect=indirect)
     elif length == 2:
-        create_files(args[1])
+        create_files(args[1],indirect=indirect)
     elif length == 3:
-        create_files(args[1],args[2])
+        create_files(args[1],args[2],indirect=indirect)
     else:
         print("""Usage:
     python SBOM.py <source_path> <dest_path>
