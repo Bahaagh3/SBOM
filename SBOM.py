@@ -19,7 +19,7 @@ def get_file(path:str,file_name:str) -> list[Path]:
     dir = Path(path)
     # check if the path is valid
     if not dir.exists() and not dir.is_dir():
-        raise NotADirectoryError(f"Did not find a real directory at '{path}'")
+        raise NotADirectoryError(f"Did not find a real directory at '{str(dir.absolute())}'")
     
     # traverse thorw the path and find all files with 'file_name' name in all sub directory
     files= dir.rglob(file_name)
@@ -86,7 +86,7 @@ def get_package_lock(path:str)-> list[dict]:
 
     files = get_file(path,"package-lock.json")
     data = []
-    #last_check = str(datetime.datetime.now())
+    
 
     for file in files:
         text = json.loads(file.read_text())
@@ -96,26 +96,26 @@ def get_package_lock(path:str)-> list[dict]:
             # check if the package name is "" (which mean its the pacakge.json dependencies) and skip it so we dont get duplicets
             if  package == "" or"dependencies" not in packages[package]:
                 continue
-
             current_dependencies =packages[package]["dependencies"]
             for dependency in current_dependencies:
-                # if dependency allready exists than take the one with the latest version 
+                # If dependency allready exists than take the one with the latest version 
                 if dependency in dependencies:
+                    # The dependencies has the same format("^version") so we can use max() 
                     dependencies[dependency] = max(dependencies[dependency],current_dependencies[dependency])
                 else:
                     dependencies[dependency] = current_dependencies[dependency]
         for d in dependencies:
-            data.append({"name":d, "version":dependencies[d],"type":"npm-i","path":str(file.absolute())})
+            # Set the type for indirect dependencies to "npm", can also have a unique type like "npm-i".
+            # We can know if dependency is indirect by checking if the version starts with '^'.
+            data.append({"name":d, "version":dependencies[d],"type":"npm","path":str(file.absolute())}) 
     return data
 
 def create_files(path:str,dest:str = Path.cwd(),indirect:bool = True) -> None:
     """
-    This function create 'SBOM.csv' and 'SBOM.json' files given a 'path' to the repositories directory.
+    This function create 'sbom.csv' and 'sbom.json' files given a 'path' to the repositories directory.
     Parameters:
         - path (str) : The absolute or relative path to a directory
         - dest (str) : The path to a directory where SBOM files are saved. Default set to the current directory
-    
-
     """
     # getting the data
     req_data = get_requirements(path)
@@ -125,19 +125,21 @@ def create_files(path:str,dest:str = Path.cwd(),indirect:bool = True) -> None:
         pack_lock_data = get_package_lock(path)
 
     data = req_data+pack_data+pack_lock_data
-
+    if len(data) == 0:
+        print(f"No data found at '{str(Path(path).absolute())}'")
+        return
     # trun them to a dataframe so it can easily be trun into csv file 
     df = pd.DataFrame(data)
     dest_dir = Path(dest)
     # check if dest_dir is valid
     if not dest_dir.exists() and not dest_dir.is_dir():
-        raise NotADirectoryError(f"Did not find a real directory at '{dest_dir}'")
+        raise NotADirectoryError(f"Did not find a real directory at '{str(dest_dir.absolute())}'")
 
     # creating csv
     csv_file = Path(dest).joinpath("sbom.csv")
     csv_file.write_text(df.to_csv(index_label= False,index=False),newline="")
     print(f"Saved SBOM in CSV format at '{dest_dir}'")
-
+    data = {"timestamp": str(datetime.datetime.now()),"content":data}
     # creating json
     json_file = Path(dest).joinpath("sbom.json")
     json_file.write_text(json.dumps(data,indent=4),newline="")
@@ -146,7 +148,7 @@ def create_files(path:str,dest:str = Path.cwd(),indirect:bool = True) -> None:
 
 if __name__ == "__main__":
     args = sys.argv
-    # change to True if you dont want  dependencies
+    # change to True if you want indirect dependencies
     indirect = False
     
     length = len(args)
