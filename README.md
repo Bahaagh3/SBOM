@@ -67,5 +67,5 @@ The json file contains an extra attribute `timestamp` which shows when the scrip
 }
 ```
 
-## Authors
+## Author
 * Bahaa Aldeen Ghazal (bahaaghazal2003@gmail.com)
