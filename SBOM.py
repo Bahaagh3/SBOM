@@ -18,7 +18,7 @@ def get_file(path:str,file_name:str) -> list[Path]:
 
     dir = Path(path)
     # check if the path is valid
-    if not dir.exists() and not dir.is_dir():
+    if not dir.exists() or not dir.is_dir(): 
         raise NotADirectoryError(f"Did not find a real directory at '{str(dir.absolute())}'")
     
     # traverse thorw the path and find all files with 'file_name' name in all sub directory
@@ -132,7 +132,7 @@ def create_files(path:str,dest:str = Path.cwd(),indirect:bool = True) -> None:
     df = pd.DataFrame(data)
     dest_dir = Path(dest)
     # check if dest_dir is valid
-    if not dest_dir.exists() and not dest_dir.is_dir():
+    if not dest_dir.exists() or not dest_dir.is_dir():
         raise NotADirectoryError(f"Did not find a real directory at '{str(dest_dir.absolute())}'")
 
     # creating csv
