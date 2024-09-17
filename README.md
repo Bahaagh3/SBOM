@@ -1,9 +1,9 @@
 # SBOM
-SBOM is a Python script used to fetch dependencies form one or many git repositories in a directory.
+SBOM is a Python program used to fetch dependencies form one or many git repositories in a directory.
 ## Description
-The script goes throw all "requirements.txt" and "package.json" files then finds all the dependencies and saves them by thier name, verison, type and path. 
+The program goes throw all "requirements.txt" and "package.json" files then finds all the dependencies and saves them by thier name, verison, type and path. 
 
-The script can also fetch **indirect dependencies** from "package-lock.json" files but needs to be toggled on ( see [How to Use](#how-to-use)
+The program can also fetch **indirect dependencies** from "package-lock.json" files but needs to be toggled on ( see [How to Use](#how-to-use)
 ).
 ## Getting Started
 
@@ -67,5 +67,5 @@ The json file contains an extra attribute `timestamp` which shows when the scrip
 }
 ```
 
-## Authors
+## Author
 * Bahaa Aldeen Ghazal (bahaaghazal2003@gmail.com)
